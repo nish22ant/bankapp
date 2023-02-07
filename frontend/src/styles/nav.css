@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@900&family=Source+Code+Pro:wght@400&display=swap');
+.nav-bar {
+  margin: 0;
+}
+
+.nav-bar > a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0px;
+  font-family: 'Source Code Pro', monospace;
+  color:#2D2D2D;
+}
+
+#logo {
+  margin-right: 5rem;
+  margin-left: 2rem;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 0rem;
+  font-family: 'Source Code Pro', monospace;
+  letter-spacing: 2.5px;
+}
+
+a:last-child {
+  margin-right: 10rem;
+}
+
+#theme-dark {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  color: #2D2D2D;
+}
+
+#theme-light {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  color: #F6F6F4;
+}
+
+.navbar-dark > .nav-bar > a {
+  color: #F6F6F4;
+}
+
+.nav-link-light-focus:focus, .nav-link-light-focus:active {
+  background-color: #F6F6F4;
+}
+
+.nav-link-dark-focus:focus, .nav-link-dark-focus:active {
+  border-top: 5px solid #F6F6F4;
+  padding-top: 3px;
+}
+
+.active-dark {
+  border-top: 3px solid #F6F6F4;
+  border-radius: 3px;
+  padding-top: 3px;
+}
+
+.active-light {
+  border-top: 3px solid #2D2D2D;
+  border-radius: 3px;
+  padding-top: 3px;
+}
+
+ul {
+  padding-bottom: 0.5rem ;
+  border-bottom: 1px solid rgba(96.5, 96.5, 95.7, 0.5);
+  border-radius: 10px;
+}
+
+
+
