@@ -6,7 +6,13 @@ const Footer = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <footer className={darkMode ? "bg-dark text-light" : "bg-light text-dark"}>
+    <footer
+      className={`custom-border ${
+        darkMode
+          ? "bg-dark text-light footer-border"
+          : "bg-light text-dark footer-border"
+      }`}
+    >
       Copyright &copy; 2023 | Made with ❤️
     </footer>
   );

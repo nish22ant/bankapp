@@ -5,18 +5,25 @@ export default function Deposit() {
   const [amount, setAmount] = useState("");
   const [depositData, setDepositData] = useState({
     accountNumber: "",
-    chequeNumber: "",
-    selectedFile: "",
-    password: "",
-    amount,
+    // chequeNumber: "",
+    // selectedFile: "",
+    // password: "",
+    amount: "",
   });
+
+  const handleInputChange = (event) => {
+    setDepositData({
+      ...depositData,
+      [event.target.name]: event.target.value,
+    });
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     formData.append("accountNumber", event.target.accountNumber.value);
     formData.append("amount", event.target.amount.value);
     fetch(
-      `http://localhost:8080/bankapp_servlet/api/deposit?accountNumber=${accountNumber}&amount=${amount}`,
+      `http://localhost:65535/bankapp_servlet/api/deposit?accountNumber=${depositData.accountNumber}&amount=${depositData.amount}`,
       {
         method: "POST",
         body: formData,
@@ -36,8 +43,8 @@ export default function Deposit() {
           id="accountNumber"
           type="text"
           name="accountNumber"
-          value={accountNumber}
-          onChange={(e) => setAccountNumber(e.target.value)}
+          value={depositData.accountNumber}
+          onChange={handleInputChange}
         />
         <br />
         <label>Enter Amount</label> <br />
@@ -45,8 +52,8 @@ export default function Deposit() {
           id="amount"
           type="text"
           name="amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
+          value={depositData.amount}
+          onChange={handleInputChange}
         />
         <br />
         <button type="submit">Submit</button>

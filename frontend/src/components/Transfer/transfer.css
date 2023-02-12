@@ -1,26 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 #transfer {
-    margin: auto;
-    padding: auto;
-    height: auto;
+  margin: auto;
+  padding: auto;
+  height: auto;
 }
 
 #transfer > .container {
-    width: 30%;
-    padding-bottom: 2rem;
+  width: 30%;
+  padding-bottom: 2rem;
 }
 
 input {
-    margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .title {
-    font-family: 'Roboto Mono', monospace;    
-    font-size: 1.75rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-    padding: 3rem 0 1rem 0;
-
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 3rem 0 1rem 0;
 }
-

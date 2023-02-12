@@ -27,7 +27,7 @@ const TransferForm = (props) => {
     formData.append("passwordAgain", event.target.passwordAgain.value);
 
     fetch(
-      `http://localhost:8080/bankapp_servlet/api/transfer?fromAccountNumber=${transferData.fromAccountNumber}&toAccountNumber=${transferData.toAccountNumber}&amount=${transferData.amount}&password=${transferData.password}&passwordAgain=${transferData.passwordAgain}`,
+      `http://localhost:65535/bankapp_servlet/api/transfer?fromAccountNumber=${transferData.fromAccountNumber}&toAccountNumber=${transferData.toAccountNumber}&amount=${transferData.amount}&password=${transferData.password}&passwordAgain=${transferData.passwordAgain}`,
       {
         method: "POST",
         body: formData,

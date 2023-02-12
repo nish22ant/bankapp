@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@900&family=Source+Code+Pro:wght@400&display=swap');
 
 body {
-    height: '100vh';
     font-family: 'Source Code Pro', monospace;
     font-size: 0.9rem;
 }

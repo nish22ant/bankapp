@@ -1,4 +1,9 @@
 footer {
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-border {
+  border-top: 1px solid rgba(96.5, 96.5, 95.7, 0.5);
+  border-radius: 10px;
 }
