@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.bankapp.model.connectionfactory.ConnectionFactoryMySQL;
 import com.bankapp.model.dao.AccountDao;
 import com.bankapp.model.dao.AccountDaoJDBC;
-import com.bankapp.model.dao.ConnectionFactory;
 import com.bankapp.model.service.AccountService;
 import com.bankapp.model.service.AccountServiceImp;
 import com.bankapp.utils.HeaderUtils;
@@ -31,7 +31,7 @@ public class TransferServlet extends HttpServlet {
 	public void init() throws ServletException {
 		super.init();
 		try {
-			AccountDao accountDao = new AccountDaoJDBC(ConnectionFactory.getConnection());
+			AccountDao accountDao = new AccountDaoJDBC(ConnectionFactoryMySQL.getConnection());
 			accountService = new AccountServiceImp(accountDao);
 		} catch (SQLException e) {
 			LOGGER.error("Error initializing TransferServlet: " + e.getMessage(), e);
@@ -45,7 +45,7 @@ public class TransferServlet extends HttpServlet {
 		String fromAccountNumberString = request.getParameter("fromAccountNumber");
 		String toAccountNumberString = request.getParameter("toAccountNumber");
 		String amountString = request.getParameter("amount");
-		String password = request.getParameter("password");
+		String password = request.getParameter("accountPassword");
 		String passwordAgain = request.getParameter("passwordAgain");
 
 		long fromAccountNumber;

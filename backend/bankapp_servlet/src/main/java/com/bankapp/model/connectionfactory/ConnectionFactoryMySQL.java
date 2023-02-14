@@ -1,11 +1,11 @@
-package com.bankapp.model.dao;
+package com.bankapp.model.connectionfactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ConnectionFactory {
+public class ConnectionFactoryMySQL {
 	private static Connection connection = null;
 
 	public static Connection getConnection() throws SQLException {
@@ -15,7 +15,7 @@ public class ConnectionFactory {
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
-			ResourceBundle bundle = ResourceBundle.getBundle("account");
+			ResourceBundle bundle = ResourceBundle.getBundle("accountMySQL");
 			String url = bundle.getString("url");
 			String user = bundle.getString("user");
 			String password = bundle.getString("password");

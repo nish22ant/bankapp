@@ -7,7 +7,7 @@ const TransferForm = (props) => {
     fromAccountNumber: "",
     toAccountNumber: "",
     amount: "",
-    password: "",
+    accountPassword: "",
     passwordAgain: "",
   });
 
@@ -23,11 +23,11 @@ const TransferForm = (props) => {
     formData.append("fromAccountNumber", event.target.fromAccountNumber.value);
     formData.append("toAccountNumber", event.target.toAccountNumber.value);
     formData.append("amount", event.target.amount.value);
-    formData.append("password", event.target.password.value);
+    formData.append("accountPassword", event.target.accountPassword.value);
     formData.append("passwordAgain", event.target.passwordAgain.value);
 
     fetch(
-      `http://localhost:65535/bankapp_servlet/api/transfer?fromAccountNumber=${transferData.fromAccountNumber}&toAccountNumber=${transferData.toAccountNumber}&amount=${transferData.amount}&password=${transferData.password}&passwordAgain=${transferData.passwordAgain}`,
+      `http://localhost:65535/bankapp_servlet/api/transfer?fromAccountNumber=${transferData.fromAccountNumber}&toAccountNumber=${transferData.toAccountNumber}&amount=${transferData.amount}&accountPassword=${transferData.accountPassword}&passwordAgain=${transferData.passwordAgain}`,
       {
         method: "POST",
         body: formData,
@@ -89,13 +89,13 @@ const TransferForm = (props) => {
       <div className="form-group">
         <input
           type="text"
-          id="password"
-          name="password"
-          placeholder="Password"
+          id="accountPassword"
+          name="accountPassword"
+          placeholder="accountPassword"
           className={`form-control ${
             darkMode ? "bg-dark text-light" : "bg-light"
           }`}
-          value={transferData.password}
+          value={transferData.accountPassword}
           onChange={handleInputChange}
         />
       </div>
