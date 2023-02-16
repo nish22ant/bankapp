@@ -6,7 +6,6 @@ import java.util.List;
 import com.bankapp.model.dto.ECheque;
 
 public interface EChequeDao {
-	public Connection getConnection();
 	public List<ECheque> selectAllCheques();
 	public ECheque selectCheque(long chequeId);
 	public boolean insertCheque(ECheque eCheque);

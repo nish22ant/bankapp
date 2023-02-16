@@ -10,7 +10,7 @@ public class ConnectionFactoryMongoDB {
 	private static MongoClient mongoClient = null;
 	private static MongoDatabase mongoDatabase = null;
 	
-	public static MongoDatabase getDatabase() {
+	public static MongoClient getClient() {
 		ResourceBundle bundle = ResourceBundle.getBundle("accountMongoDB");
 		String username = bundle.getString("username");
 		String password = bundle.getString("password");
@@ -20,9 +20,8 @@ public class ConnectionFactoryMongoDB {
 		if(mongoClient == null) {
 			MongoClientURI uri = new MongoClientURI("mongodb://" + username + ":" + password + "@" + host + ":" + port + "/" + database);
 			mongoClient = new MongoClient(uri);
-			mongoDatabase = mongoClient.getDatabase(database);
 			System.out.println("connection successfull");
 		}
-		return mongoDatabase;
+		return mongoClient;
 	}
 }
