@@ -2,13 +2,11 @@ package com.bankapp.model.connectionfactory;
 
 import java.util.ResourceBundle;
 
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
 
 public class ConnectionFactoryMongoDB {
 	private static MongoClient mongoClient = null;
-	private static MongoDatabase mongoDatabase = null;
 	
 	public static MongoClient getClient() {
 		ResourceBundle bundle = ResourceBundle.getBundle("accountMongoDB");
@@ -18,10 +16,11 @@ public class ConnectionFactoryMongoDB {
 		String port = bundle.getString("port");
 		String database = bundle.getString("database");
 		if(mongoClient == null) {
-			MongoClientURI uri = new MongoClientURI("mongodb://" + username + ":" + password + "@" + host + ":" + port + "/" + database);
-			mongoClient = new MongoClient(uri);
+			String uriString = "mongodb://" + username + ":" + password + "@" + host + ":" + port + "/" + database;
+			mongoClient = MongoClients.create(uriString);
 			System.out.println("connection successfull");
 		}
+
 		return mongoClient;
 	}
 }

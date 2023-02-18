@@ -7,13 +7,13 @@ import java.util.List;
 
 import org.bson.Document;
 import org.bson.conversions.Bson;
+import org.bson.types.Binary;
 
 import com.bankapp.exception.ChequeAlreadyExistsException;
 import com.bankapp.exception.ChequeNotFoundException;
-import com.bankapp.model.connectionfactory.ConnectionFactoryMongoDB;
 import com.bankapp.model.dto.ECheque;
-import com.mongodb.MongoClient;
 import com.mongodb.client.ClientSession;
+import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
@@ -22,23 +22,28 @@ import com.mongodb.client.model.Updates;
 public class EChequeDaoImp implements EChequeDao {
 
 	private static final String E_CHEQUE_NOT_PRESENT_IN_DATABASE = "eCheque not present in Database";
-	private static final String COLLECTION_NAME = "eCheques";
+	private static final String COLLECTION_NAME = "echeques";
 	private static final String DATABASE_NAME = "bankapp";
 	private MongoDatabase mongoDatabase = null;
 	private MongoClient mongoClient = null;
 	private MongoCollection<Document> collection = null;
 
-	public EChequeDaoImp() {
-		this.mongoClient = ConnectionFactoryMongoDB.getClient();
-		this.mongoDatabase = mongoClient.getDatabase(DATABASE_NAME);
+	public EChequeDaoImp(MongoClient mongoClient) {
+		this.mongoClient = mongoClient;
+		this.mongoDatabase = this.mongoClient.getDatabase(DATABASE_NAME);
 		this.collection = this.mongoDatabase.getCollection(COLLECTION_NAME);
+	}
+
+	public MongoCollection<Document> getCollection() {
+		return collection;
 	}
 
 	@Override
 	public List<ECheque> selectAllCheques() {
 		List<ECheque> cheques = new ArrayList<>();
-		for (Document document : collection.find()) {
-			cheques.add(new ECheque(document.getLong("chequeId"), (byte[]) document.get("chequeImage"),
+		for (Document document : this.collection.find()) {
+			Binary binaryData = (Binary) document.get("chequeImage");
+			cheques.add(new ECheque(document.getInteger("chequeId"), binaryData.getData(),
 					document.getDate("depositDate")));
 		}
 
@@ -49,8 +54,8 @@ public class EChequeDaoImp implements EChequeDao {
 	public ECheque selectCheque(long chequeId) {
 		Document document = collection.find(eq("chequeId", chequeId)).first();
 		if (document != null) {
-			return new ECheque(document.getLong("chequeId"), (byte[]) document.get("chequeImage"),
-					document.getDate("depositDate"));
+			Binary binaryData = (Binary) document.get("chequeImage");
+			return new ECheque(document.getInteger("chequeId"), binaryData.getData(), document.getDate("depositDate"));
 		}
 		return null;
 	}
@@ -60,17 +65,27 @@ public class EChequeDaoImp implements EChequeDao {
 		ClientSession session = mongoClient.startSession();
 		try {
 			session.startTransaction();
-			Document existingCheque = collection.find(eq("id", eCheque.getChequeId())).first();
+			ECheque existingCheque = selectCheque(eCheque.getChequeId());
+			System.out.println("Checking");
 			if (existingCheque != null) {
+				System.out.println("Existing");
 				throw new ChequeAlreadyExistsException(
 						"Cheque with ID " + eCheque.getChequeId() + " already exists in the collection.");
 			}
+			System.out.println("After throws");
+			
 			Document document = new Document("chequeId", eCheque.getChequeId())
-					.append("chequeImage", eCheque.getChequeImage()).append("date", eCheque.getChequeDepositDate());
-			collection.insertOne(session, document);
+					.append("chequeImage", eCheque.getChequeImage())
+					.append("depositDate", eCheque.getChequeDepositDate());
+			System.out.println("After creating document");
+			System.out.println("Collection: " + session == null);
+			collection.insertOne(document);
+			System.out.println("After inserting");
 			session.commitTransaction();
+			System.out.println("After commiting");
 			return true;
 		} catch (Exception e) {
+			System.out.println("Inside exception");
 			session.abortTransaction();
 		} finally {
 			session.close();
@@ -105,18 +120,20 @@ public class EChequeDaoImp implements EChequeDao {
 	public int deleteCheque(long chequeId) {
 		ClientSession session = mongoClient.startSession();
 		try {
-			Document existingCheque = collection.find(eq("id", chequeId)).first();
+			session.startTransaction();
+			Document existingCheque = collection.find(eq("chequeId", chequeId)).first();
 			if (existingCheque == null) {
 				throw new ChequeNotFoundException(E_CHEQUE_NOT_PRESENT_IN_DATABASE);
 			}
+			System.out.println("After throws");
 			Document filter = new Document("chequeId", chequeId);
-			collection.deleteOne(session, filter);
+			System.out.println("Here");
+			collection.deleteOne(filter);
 			session.commitTransaction();
 			return 1;
-			
+
 		} catch (Exception e) {
 			session.abortTransaction();
-			// TODO: handle exception
 		} finally {
 			session.close();
 		}
