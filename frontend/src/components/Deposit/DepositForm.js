@@ -26,18 +26,20 @@ const DepositForm = (props) => {
     formData.append("selectedFile", event.target.selectedFile.value);
     formData.append("accountPassword", event.target.accountPassword.value);
     formData.append("amount", event.target.amount.value);
-    fetch(
-      `http://localhost:65535/bankapp_servlet/api/deposit?accountNumber=${depositData.accountNumber}&amount=${depositData.amount}`,
-      {
-        method: "POST",
-        body: formData,
-      }
-    )
-      .then((res) => res.text())
-      .then((text) => {
-        setResponse(text);
-      })
-      .catch("Yahoo");
+    
+
+    // fetch(
+    //   `http://localhost:65535/bankapp_servlet/api/deposit?accountNumber=${depositData.accountNumber}&amount=${depositData.amount}`,
+    //   {
+    //     method: "POST",
+    //     body: formData,
+    //   }
+    // )
+    //   .then((res) => res.text())
+    //   .then((text) => {
+    //     setResponse(text);
+    //   })
+    //   .catch("Yahoo");
   };
   return (
     <form

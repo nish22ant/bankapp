@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +22,7 @@ import com.bankapp.model.service.AccountServiceImp;
 import com.bankapp.utils.HeaderUtils;
 
 @WebServlet("/api/transfer")
+@MultipartConfig
 public class TransferServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final Logger LOGGER = LoggerFactory.getLogger(TransferServlet.class);
@@ -40,9 +42,11 @@ public class TransferServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		HeaderUtils.setCommonHeaders(response);
 		String fromAccountNumberString = request.getParameter("fromAccountNumber");
+		System.out.println(fromAccountNumberString);
 		String toAccountNumberString = request.getParameter("toAccountNumber");
 		String amountString = request.getParameter("amount");
 		String password = request.getParameter("accountPassword");
@@ -62,7 +66,7 @@ public class TransferServlet extends HttpServlet {
 			return;
 		}
 
-		HeaderUtils.setCommonHeaders(response);
+
 		response.setContentType("text/html");
 
 		try {
@@ -78,7 +82,7 @@ public class TransferServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
 	}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const TransferForm = (props) => {
   const darkMode = props.darkMode;
@@ -17,7 +18,7 @@ const TransferForm = (props) => {
       [event.target.name]: event.target.value,
     });
   };
-  const handleTransferSubmit = (event) => {
+  const handleTransferSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     formData.append("fromAccountNumber", event.target.fromAccountNumber.value);
@@ -26,18 +27,13 @@ const TransferForm = (props) => {
     formData.append("accountPassword", event.target.accountPassword.value);
     formData.append("passwordAgain", event.target.passwordAgain.value);
 
-    fetch(
-      `http://localhost:65535/bankapp_servlet/api/transfer?fromAccountNumber=${transferData.fromAccountNumber}&toAccountNumber=${transferData.toAccountNumber}&amount=${transferData.amount}&accountPassword=${transferData.accountPassword}&passwordAgain=${transferData.passwordAgain}`,
-      {
-        method: "POST",
-        body: formData,
-      }
-    )
-      .then((res) => res.text())
-      .then((text) => {
-        setResponse(text);
+    await axios.post("http://localhost:65535/bankapp_servlet/api/transfer", formData)
+      .then((res) => {
+        setResponse(res.data)
       })
-      .catch("Yahoo");
+      .catch((err) => {
+        console.log(err);
+      })
   };
 
   return (

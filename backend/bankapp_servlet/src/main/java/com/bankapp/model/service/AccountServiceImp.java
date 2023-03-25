@@ -49,8 +49,6 @@ public class AccountServiceImp implements AccountService {
 			}
 		} catch (SQLException e) {
 			connection.rollback();
-		} finally {
-			connection.setAutoCommit(true);
 		}
 		return status;
 
@@ -70,8 +68,6 @@ public class AccountServiceImp implements AccountService {
 			}
 		} catch (SQLException e) {
 			connection.rollback();
-		} finally {
-			connection.setAutoCommit(true);
 		}
 		return status;
 
@@ -86,8 +82,6 @@ public class AccountServiceImp implements AccountService {
 			connection.commit();
 		} catch (SQLException e) {
 			connection.rollback();
-		} finally {
-			connection.setAutoCommit(true);
 		}
 		return status;
 	}
@@ -107,9 +101,7 @@ public class AccountServiceImp implements AccountService {
 			connection.commit();
 		} catch (SQLException e) {
 			connection.rollback();
-		} finally {
-			connection.setAutoCommit(true);
-		}
+		} 
 		return balance;
 	}
 
@@ -128,9 +120,7 @@ public class AccountServiceImp implements AccountService {
 			connection.commit();
 		} catch (SQLException e) {
 			connection.rollback();
-		} finally {
-			connection.setAutoCommit(true);
-		}
+		} 
 		return balance;
 	}
 
@@ -154,8 +144,6 @@ public class AccountServiceImp implements AccountService {
 			status = 1;
 		} catch (SQLException e) {
 			connection.rollback();
-		} finally {
-			connection.setAutoCommit(false);
 		}
 		return status;
 
@@ -182,8 +170,6 @@ public class AccountServiceImp implements AccountService {
 			status = 1;
 		} catch (SQLException e) {
 			connection.rollback();
-		} finally {
-			connection.setAutoCommit(true);
 		}
 
 		return status;
