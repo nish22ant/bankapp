@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 const DepositForm = (props) => {
   const darkMode = props.darkMode;
   const [response, setResponse] = useState("");
@@ -18,6 +19,7 @@ const DepositForm = (props) => {
       [event.target.name]: event.target.value,
     });
   };
+
   const handleDepositSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -26,20 +28,14 @@ const DepositForm = (props) => {
     formData.append("selectedFile", event.target.selectedFile.value);
     formData.append("accountPassword", event.target.accountPassword.value);
     formData.append("amount", event.target.amount.value);
-    
-
-    // fetch(
-    //   `http://localhost:65535/bankapp_servlet/api/deposit?accountNumber=${depositData.accountNumber}&amount=${depositData.amount}`,
-    //   {
-    //     method: "POST",
-    //     body: formData,
-    //   }
-    // )
-    //   .then((res) => res.text())
-    //   .then((text) => {
-    //     setResponse(text);
-    //   })
-    //   .catch("Yahoo");
+    axios
+      .post("http://localhost:65535/bankapp_servlet/api/deposit", formData)
+      .then((res) => {
+        setResponse(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <form
@@ -63,6 +59,19 @@ const DepositForm = (props) => {
       </div>
       <div className="form-group">
         <input
+          type="text"
+          id="chequeNumber"
+          name="chequeNumber"
+          placeholder="Cheque Number"
+          className={`form-control ${
+            darkMode ? "bg-dark text-light" : "bg-light"
+          }`}
+          value={depositData.chequeNumber}
+          onChange={handleInputChange}
+        />
+      </div>
+      <div className="form-group">
+        <input
           type="file"
           id="selectedFile"
           name="selectedFile"
@@ -70,7 +79,7 @@ const DepositForm = (props) => {
           className={`form-control ${
             darkMode ? "bg-dark text-light" : "bg-light"
           }`}
-          value={depositData.chequeNumber}
+          value={depositData.selectedFile}
           onChange={handleInputChange}
         />
       </div>
