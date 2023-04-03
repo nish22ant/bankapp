@@ -1,12 +1,14 @@
 package com.bankapp.servlets;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.Base64;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -15,6 +17,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.output.ByteArrayOutputStream;
 
 import com.bankapp.model.connectionfactory.ConnectionFactoryMongoDB;
 import com.bankapp.model.connectionfactory.ConnectionFactoryMySQL;
@@ -53,14 +59,21 @@ public class DepositServlet extends HttpServlet {
 		HeaderUtils.setCommonHeaders(response);
 		String accountNumberString = request.getParameter("accountNumber");
 		String chequeNumberString = request.getParameter("chequeNumber");
-		String selectedFile = request.getParameter("selectedFile");
-		byte[] file = Files.readAllBytes(new File(selectedFile).toPath());
-		String amount = request.getParameter("amount");
-		System.out.println(Arrays.toString(file));
+		String accountPasswordString = request.getParameter("accountPassword");
+		String amountString = request.getParameter("amount");
+		InputStream inputStream = request.getPart("selectedFile").getInputStream();
+		byte[] bytes = null;
+		try {
+			long accountNumber = Long.parseLong(accountNumberString);
+			long chequeNumber = Long.parseLong(chequeNumberString);
+			long amount = Long.parseLong(amountString);
+			bytes = IOUtils.toByteArray(inputStream);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			inputStream.close();
+		}
 		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println(accountNumberString + " : " + amount);
 		
 		
 		
@@ -70,7 +83,7 @@ public class DepositServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
-	
+
 	
 
 }

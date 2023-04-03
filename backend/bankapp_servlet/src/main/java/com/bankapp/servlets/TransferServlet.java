@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.bankapp.exception.BankAccountNotFoundException;
 import com.bankapp.model.connectionfactory.ConnectionFactoryMySQL;
 import com.bankapp.model.dao.AccountDao;
 import com.bankapp.model.dao.AccountDaoJDBC;
@@ -25,6 +26,9 @@ import com.bankapp.utils.HeaderUtils;
 @MultipartConfig
 public class TransferServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static long fromAccountNumber;
+	private static long toAccountNumber;
+	private static double amount;
 	private static final Logger LOGGER = LoggerFactory.getLogger(TransferServlet.class);
 
 	private AccountService accountService;
@@ -45,16 +49,13 @@ public class TransferServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HeaderUtils.setCommonHeaders(response);
+		PrintWriter writer = response.getWriter();
 		String fromAccountNumberString = request.getParameter("fromAccountNumber");
-		System.out.println(fromAccountNumberString);
 		String toAccountNumberString = request.getParameter("toAccountNumber");
 		String amountString = request.getParameter("amount");
 		String password = request.getParameter("accountPassword");
 		String passwordAgain = request.getParameter("passwordAgain");
 
-		long fromAccountNumber;
-		long toAccountNumber;
-		double amount;
 
 		try {
 			fromAccountNumber = Long.parseLong(fromAccountNumberString);
@@ -66,18 +67,20 @@ public class TransferServlet extends HttpServlet {
 			return;
 		}
 
-
-		response.setContentType("text/html");
-
 		try {
+			System.out.println("From Account: " + accountService.getAccount(fromAccountNumber));
 			accountService.transfer(fromAccountNumber, toAccountNumber, amount, password);
+		} catch(BankAccountNotFoundException be) {
+			writer.println("Incorrect Bank Account Number");
+			return;
 		} catch (SQLException e) {
 			LOGGER.error("Error transferring funds: " + e.getMessage(), e);
 			response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error transferring funds");
+			writer.println("Funds Transfer Failed");
 			return;
 		}
-		PrintWriter writer = response.getWriter();
-		writer.println("Funds transferred successfully");
+		response.setStatus(HttpServletResponse.SC_OK);
+		writer.println("Funds Transferred Successfully");
 		writer.flush();
 	}
 

@@ -30,6 +30,8 @@ const TransferForm = (props) => {
     await axios.post("http://localhost:65535/bankapp_servlet/api/transfer", formData)
       .then((res) => {
         setResponse(res.data)
+        console.log(res)
+        props.updateMessage(res.data)
       })
       .catch((err) => {
         console.log(err);
@@ -41,7 +43,7 @@ const TransferForm = (props) => {
       className={`p-3 form-border ${
         !darkMode ? "border-dark" : "border-secondary"
       }`}
-      onSubmit={handleTransferSubmit}
+      onSubmit={handleTransferSubmit} enctype="multipart/form-data"
     >
       <div className="form-group">
         <input
@@ -117,8 +119,7 @@ const TransferForm = (props) => {
         >
           Submit
         </button>
-      </div>
-      <div>{response}</div>
+      </div> 
     </form>
   );
 };

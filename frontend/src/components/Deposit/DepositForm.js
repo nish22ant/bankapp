@@ -5,13 +5,17 @@ const DepositForm = (props) => {
   const [response, setResponse] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
   const [amount, setAmount] = useState("");
+  const [image, setImage] = useState(null);
   const [depositData, setDepositData] = useState({
     accountNumber: "",
     chequeNumber: "",
-    selectedFile: "",
     accountPassword: "",
     amount: "",
   });
+
+  const handleImageChange = (e) => {
+    setImage(e.target.files[0]);
+  };
 
   const handleInputChange = (event) => {
     setDepositData({
@@ -20,12 +24,14 @@ const DepositForm = (props) => {
     });
   };
 
-  const handleDepositSubmit = (event) => {
+
+  const handleDepositSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
+    console.log("From React:",image);
     formData.append("accountNumber", event.target.accountNumber.value);
     formData.append("chequeNumber", event.target.chequeNumber.value);
-    formData.append("selectedFile", event.target.selectedFile.value);
+    formData.append("selectedFile", image);
     formData.append("accountPassword", event.target.accountPassword.value);
     formData.append("amount", event.target.amount.value);
     axios
@@ -80,7 +86,7 @@ const DepositForm = (props) => {
             darkMode ? "bg-dark text-light" : "bg-light"
           }`}
           value={depositData.selectedFile}
-          onChange={handleInputChange}
+          onChange={handleImageChange}
         />
       </div>
       <div className="form-group">
