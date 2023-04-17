@@ -17,7 +17,7 @@ export default function Nav() {
     >
       <ul className="nav-bar container-fluid">
         <Link id="logo" to="/">
-          <i style={{ fontSize: "2.5rem", fontWeight: "bolder" }}>B</i>yteCity
+          <i style={{ fontSize: "2.5rem", fontWeight: "bolder" }}>B</i>yteCity._
         </Link>
         <Link
           className={`nav-link ${

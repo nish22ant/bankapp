@@ -13,4 +13,22 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.bankapp"/>
+		</list>
+		<list key="name">
+			<item value="bankapp_spring_mvc"/>
+		</list>
+		<list key="artifactId">
+			<item value="bankapp_spring_mvc"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
 </section>

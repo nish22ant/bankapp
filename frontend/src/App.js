@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Deposit from "./components/Deposit/Deposit";
-import PayBills from "./components/PayBills";
+import PayBills from "./components/PayBills/PayBills";
 import Transfer from "./components/Transfer/Transfer";
 import Footer from "./components/UI/Footer/Footer";
 

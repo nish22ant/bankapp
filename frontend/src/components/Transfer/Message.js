@@ -1,12 +1,15 @@
+import "./Message.css";
 const Message = (props) => {
     const darkMode = props.darkMode;
+    const message = props.message;
+
     
 
   return (
     
-    <fieldset className={darkMode ? "border-light" : "border-dark"}>
+    <fieldset className={!darkMode ? "text-dark" : "text-white"}>
       <legend >Status</legend>
-      <p>This is my content inside the border.</p>
+      <p>{message}</p>
     </fieldset>
   );
 };

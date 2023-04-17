@@ -3,6 +3,8 @@ package com.bankapp.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -11,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.bson.json.JsonObject;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +25,7 @@ import com.bankapp.model.dao.AccountDaoJDBC;
 import com.bankapp.model.service.AccountService;
 import com.bankapp.model.service.AccountServiceImp;
 import com.bankapp.utils.HeaderUtils;
+import com.bankapp.utils.Messages;
 
 @WebServlet("/api/transfer")
 @MultipartConfig
@@ -55,8 +60,6 @@ public class TransferServlet extends HttpServlet {
 		String amountString = request.getParameter("amount");
 		String password = request.getParameter("accountPassword");
 		String passwordAgain = request.getParameter("passwordAgain");
-
-
 		try {
 			fromAccountNumber = Long.parseLong(fromAccountNumberString);
 			toAccountNumber = Long.parseLong(toAccountNumberString);
