@@ -87,9 +87,9 @@ export default function Nav() {
                 : "active-light"
               : ""
           }`}
-          to="/mini"
+          to="/analytics"
         >
-          Mini Statement
+          Analytics
         </Link>
         <Link
           className={`nav-link ${

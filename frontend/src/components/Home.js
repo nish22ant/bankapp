@@ -1,3 +1,10 @@
+import Hero from "./Hero/Hero";
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 export default function Home() {
-    return <h1>Home</h1>;
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+  return (
+      <Hero darkMode={darkMode} />
+  );
 }

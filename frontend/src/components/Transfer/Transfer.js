@@ -2,7 +2,7 @@ import "./transfer.css";
 import { useState, useContext } from "react";
 import { ThemeContext } from "../ThemeContext";
 import TransferForm from "./TransferForm";
-import Message from "./Message";
+import Message from "../Utils/Message";
 
 const Transfer = () => {
   const [message, SetMessage] = useState("");
@@ -27,7 +27,9 @@ const Transfer = () => {
         </div>
       </div>
       {console.log(message)}
-      <div className="status">{message ? <Message message={message} darkMode={darkMode} /> : ""}</div>
+      <div className="status">
+        {message ? <Message message={message} darkMode={darkMode} /> : ""}
+      </div>
     </div>
   );
 };

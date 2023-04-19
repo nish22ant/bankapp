@@ -11,9 +11,10 @@
   padding-bottom: 5rem;
 }
 
-input {
+input, select, textarea {
   margin-bottom: 1.25rem;
 }
+
 
 .status {
   float: right;
@@ -26,9 +27,13 @@ input {
 }
 
 .title {
-  font-family: "Roboto Mono", monospace;
+  font-family: monospace;
   font-size: 1.75rem;
   letter-spacing: 2px;
   font-weight: bold;
   padding: 5rem 0 1rem 0;
+}
+
+option {
+  color: #758393;
 }
