@@ -12,7 +12,7 @@ export default function Deposit() {
           darkMode ? "text-light" : "text-dark"
         }`}
       >
-        <i style={{ fontSize: "2rem", fontWeight: "700" }}>D</i>epositFunds
+        <i style={{ fontSize: "2rem", fontWeight: "700" }}>D</i>epositFunds._
       </h1>
       <div className="container">
         <DepositForm darkMode={darkMode} />

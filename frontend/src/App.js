@@ -6,6 +6,9 @@ import Deposit from "./components/Deposit/Deposit";
 import PayBills from "./components/PayBills/PayBills";
 import Transfer from "./components/Transfer/Transfer";
 import AddAccount from "./components/AddAccount/AddAccount";
+import Analytics from "./components/Analytics/Analytics";
+import Login from "./components/Login/Login";
+import SignUp from "./components/SignUp/SignUp";
 import Contact from "./components/Contact/Contact";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Footer from "./components/UI/Footer/Footer";
@@ -20,6 +23,9 @@ function App() {
         <Route exact path="/pay" element={<PayBills />} />
         <Route exact path="/transfer" element={<Transfer />} />
         <Route exact path="/add" element={<AddAccount />} />
+        <Route exact path="/analytics" element={<Analytics />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/sign" element={<SignUp />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/about" element={<AboutUs />} />
       </Routes>

@@ -20,7 +20,7 @@ const Contact = () => {
             darkMode ? "text-light" : "text-dark"
           }`}
         >
-          <i style={{ fontSize: "2rem", fontWeight: "700" }}>C</i>ontact
+          <i style={{ fontSize: "2rem", fontWeight: "700" }}>C</i>ontact._
         </h1>
         <div className="container">
           <ContactForm darkMode={darkMode} updateMessage={updateMessage} />

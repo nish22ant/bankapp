@@ -1,0 +1,11 @@
+.analytics {
+    display: flex;
+    justify-content: center;
+    height: 36.2rem
+}
+
+.analytics > h1 {
+    padding: 15rem;
+    font-family: monospace;
+    font-style: italic;
+}

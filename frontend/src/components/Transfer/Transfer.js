@@ -19,8 +19,8 @@ const Transfer = () => {
           className={`title text-center mx-auto ${
             darkMode ? "text-light" : "text-dark"
           }`}
-        >
-          <i style={{ fontSize: "2rem", fontWeight: "700" }}>T</i>ransferFunds
+        > 
+          <i style={{ fontSize: "2rem", fontWeight: "700" }}>T</i>ransferFunds._
         </h1>
         <div className="container">
           <TransferForm darkMode={darkMode} updateMessage={updateMessage} />

@@ -1,6 +1,6 @@
 package com.bankapp.configuration;
 
-import javax.activation.DataSource;
+import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,22 +23,19 @@ public class BankappConfig {
 	private String user;
 	@Value("${password}")
 	private String password;
-	
 	@Autowired
 	@Bean
 	public JdbcTemplate getJdbcTemplate(DriverManagerDataSource driverManagerDataSource) {
 		return new JdbcTemplate(driverManagerDataSource);
 	}
 	
-	@Bean
-	public DataSource getMySQLDataSource() {
-		DataSource dataSource = new DataSource();
-		dataSource.setDriverClassName(driver);
-		dataSource.setUrl(url);
-		dataSource.setUsername(user);
-		dataSource.setPassword(password);
-		
-		return dataSource;
+	public DataSource getDataSource() {
+		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+		driverManagerDataSource.setDriverClassName(driver);
+		driverManagerDataSource.setUrl(url);
+		driverManagerDataSource.setUsername(user);
+		driverManagerDataSource.setPassword(password);
+		return driverManagerDataSource;
 	}
 	
 	

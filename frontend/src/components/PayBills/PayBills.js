@@ -13,7 +13,7 @@ const PayBills = () => {
           darkMode ? "text-light" : "text-dark"
         }`}
       >
-        <i style={{ fontSize: "2rem", fontWeight: "700" }}>P</i>ayBills
+        <i style={{ fontSize: "2rem", fontWeight: "700" }}>P</i>ayBills._
       </h1>
       <div className="container">
         <PayBillsForm darkMode={darkMode} />

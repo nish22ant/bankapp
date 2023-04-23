@@ -1,7 +1,12 @@
 import "./AboutUs.css";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 const AboutUs = () => {
+
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode
   return (
-    <div id="about-us">
+    <div id="about-us" className={darkMode ? "bg-dark text-light" : "bg-light text-dark"}>
       <p>
         <b><i>W</i></b>elcome to ByteCity Bank, a Toronto-based financial institution
         committed to helping you achieve your financial goals. We believe in
