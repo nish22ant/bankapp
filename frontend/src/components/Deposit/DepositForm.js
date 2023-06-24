@@ -1,10 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+
 const DepositForm = (props) => {
   const darkMode = props.darkMode;
   const [response, setResponse] = useState("");
-  const [accountNumber, setAccountNumber] = useState("");
-  const [amount, setAmount] = useState("");
   const [image, setImage] = useState(null);
   const [depositData, setDepositData] = useState({
     accountNumber: "",
@@ -14,7 +13,9 @@ const DepositForm = (props) => {
   });
 
   const handleImageChange = (e) => {
-    setImage(e.target.files[0]);
+    const selectedImage = e.target.files[0];
+    setImage(selectedImage);
+    setDepositData({ ...depositData, selectedFile: selectedImage });
   };
 
   const handleInputChange = (event) => {
@@ -24,18 +25,21 @@ const DepositForm = (props) => {
     });
   };
 
-
   const handleDepositSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    console.log("From React:",image);
-    formData.append("accountNumber", event.target.accountNumber.value);
-    formData.append("chequeNumber", event.target.chequeNumber.value);
+    const formData = new FormData();
+    formData.append("accountNumber", depositData.accountNumber);
+    formData.append("chequeNumber", depositData.chequeNumber);
+    formData.append("accountPassword", depositData.accountPassword);
+    formData.append("amount", depositData.amount);
     formData.append("selectedFile", image);
-    formData.append("accountPassword", event.target.accountPassword.value);
-    formData.append("amount", event.target.amount.value);
+
     axios
-      .post("http://localhost:65535/bankapp_servlet/api/deposit", formData)
+      .post(
+        "http://localhost:65535/bankapp_spring_mvc/api/deposit",
+        formData,
+        { withCredentials: true }
+      )
       .then((res) => {
         setResponse(res.data);
       })
@@ -43,6 +47,7 @@ const DepositForm = (props) => {
         console.log(err);
       });
   };
+
   return (
     <form
       className={`p-3 form-border ${
@@ -85,9 +90,16 @@ const DepositForm = (props) => {
           className={`form-control ${
             darkMode ? "bg-dark text-light" : "bg-light"
           }`}
-          value={depositData.selectedFile}
           onChange={handleImageChange}
         />
+        {/* {image && (
+          <img
+            src={URL.createObjectURL(image)}
+            alt="Cheque Preview"
+            className="mt-2"
+            style={{width: "1rem"}}
+          />
+        )} */}
       </div>
       <div className="form-group">
         <input

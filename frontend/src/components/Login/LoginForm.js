@@ -41,7 +41,7 @@ const handleSubmit = (event) => {
       <button
         type="submit"
         className={`btn ${
-          !darkMode
+          darkMode
             ? "btn-dark text-light btn-outline-light mx-auto"
             : "btn-light text-dark mx-auto"
         }`}

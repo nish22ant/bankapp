@@ -8,7 +8,7 @@ const Login = () => {
 
   return (
     <div id="transfer" className={darkMode ? "bg-dark" : "bg-light"}
-    style={{paddingTop: "5rem"}}>
+    style={{paddingTop: "4.75rem"}}>
       <div>
         <h1
           className={`title text-center mx-auto ${

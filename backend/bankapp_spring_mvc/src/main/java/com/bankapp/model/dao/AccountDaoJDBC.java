@@ -7,11 +7,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.bankapp.model.entity.Account;
 
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
+@Repository
 public class AccountDaoJDBC implements AccountDao {
 	private Connection connection = null;
 	private PreparedStatement preparedStmt = null;
@@ -30,11 +33,7 @@ public class AccountDaoJDBC implements AccountDao {
 			e.printStackTrace();
 		}
 	}
-
-	public Connection getDaoConnection() {
-		return connection;
-	}
-
+	
 	@Override
 	public Account selectAccount(long accountNumber) {
 		Account account = null;

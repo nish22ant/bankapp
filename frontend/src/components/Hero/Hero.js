@@ -5,7 +5,7 @@ const Hero = (props) => {
   return (
     <div className={darkMode ? "bg-dark text-light" : "bg-light text-dark"}>
       <div className="text-container">
-        <h1>ByteCity</h1>
+        <h1>ByteCity.</h1>
         <div className="home-link-container">
           <Link className="home-link" to="/sign">
             Sign Up

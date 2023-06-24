@@ -1,15 +1,23 @@
+import { Fragment } from "react";
 import "./Message.css";
 const Message = (props) => {
-    const darkMode = props.darkMode;
-    const message = props.message;
+  const darkMode = props.darkMode;
+  const messages = props.message;
 
-    
+  let messageContent;
+
+  if (Array.isArray(messages)) {
+    messageContent = messages.map((message) => (
+      <li key={message.id}>{message}<br /></li>
+    ));
+  } else {
+    messageContent = messages;
+  }
 
   return (
-    
     <fieldset className={!darkMode ? "text-dark" : "text-white"}>
-      <legend >Status</legend>
-      <p>{message}</p>
+      <legend>Status</legend>
+      <ul>{messageContent}</ul>
     </fieldset>
   );
 };

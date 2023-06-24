@@ -4,9 +4,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.bankapp.model.entity.Account;
 
+@Component
 public class AccountRowMapper implements RowMapper<Account> {
 
 	@Override

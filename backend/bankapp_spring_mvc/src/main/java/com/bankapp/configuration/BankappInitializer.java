@@ -2,6 +2,11 @@ package com.bankapp.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * Configuring Dispatcher Servlet
+ * @author nknis
+ *
+ */
 public class BankappInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
@@ -12,13 +17,13 @@ public class BankappInitializer extends AbstractAnnotationConfigDispatcherServle
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Class[] { BankappConfig.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] {"/"};
+		return new String[] { "/" };
 	}
+
 
 }

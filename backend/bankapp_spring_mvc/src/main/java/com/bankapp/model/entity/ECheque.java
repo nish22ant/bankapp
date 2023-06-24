@@ -8,6 +8,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
+/***
+ * For MongoDB
+ * @author nknis
+ *
+ */
+
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 @Data

@@ -11,23 +11,25 @@ const TransferForm = (props) => {
     accountPassword: "",
     passwordAgain: "",
   });
-
   const handleInputChange = (event) => {
     setTransferData({
       ...transferData,
       [event.target.name]: event.target.value,
     });
   };
+  
   const handleTransferSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData();
     formData.append("fromAccountNumber", event.target.fromAccountNumber.value);
     formData.append("toAccountNumber", event.target.toAccountNumber.value);
     formData.append("amount", event.target.amount.value);
     formData.append("accountPassword", event.target.accountPassword.value);
     formData.append("passwordAgain", event.target.passwordAgain.value);
-
-    await axios.post("http://localhost:65535/bankapp_servlet/api/transfer", formData)
+    for(let form of formData) {
+      console.log(form);
+    }
+    await axios.post("http://localhost:65535/bankapp_spring_mvc/api/transfer", formData, {withCredentials: true})
       .then((res) => {
         setResponse(res.data)
         console.log(res)
@@ -35,6 +37,7 @@ const TransferForm = (props) => {
       })
       .catch((err) => {
         console.log(err);
+        props.updateMessage(err.response.data)
       })
   };
 
