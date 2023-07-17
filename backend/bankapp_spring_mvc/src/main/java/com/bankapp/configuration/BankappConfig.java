@@ -1,16 +1,17 @@
 package com.bankapp.configuration;
 
+import javax.annotation.PreDestroy;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
@@ -18,6 +19,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
  * Configuration file for bean creation
+ * 
  * @author nknis
  *
  */
@@ -26,6 +28,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @ComponentScan("com.bankapp")
 @PropertySource("classpath:accountMySQL.properties")
 @EnableWebMvc
+@EnableCaching
 public class BankappConfig {
 	@Value("${driver}")
 	private String driver;
@@ -35,8 +38,9 @@ public class BankappConfig {
 	private String user;
 	@Value("${password}")
 	private String password;
+	@Autowired
+	private DataSource dataSource;
 
-	
 	/**
 	 * 
 	 * @param dataSource
@@ -51,23 +55,9 @@ public class BankappConfig {
 	/**
 	 * 
 	 * @return
-	 */
-	@Bean
-	public DataSource dataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(driver);
-		dataSource.setUrl(url);
-		dataSource.setUsername(user);
-		dataSource.setPassword(password);
-		return dataSource;
-	}
-
-	/**
-	 * 
-	 * @return
 	 * @throws Exception
 	 */
-	@Bean
+	@Bean(destroyMethod = "close")
 	@Primary
 	public DataSource c3P0DataSource() throws Exception {
 		ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
@@ -79,8 +69,17 @@ public class BankappConfig {
 		comboPooledDataSource.setMaxPoolSize(100);
 		comboPooledDataSource.setAcquireIncrement(5);
 		comboPooledDataSource.setMaxIdleTime(3000);
-
 		return comboPooledDataSource;
+	}
+	
+	/**
+	 * To clear datasource
+	 */
+	@PreDestroy
+	public void cleanup() {
+		if (dataSource instanceof ComboPooledDataSource) {
+			((ComboPooledDataSource) dataSource).close();
+		}
 	}
 
 	/**

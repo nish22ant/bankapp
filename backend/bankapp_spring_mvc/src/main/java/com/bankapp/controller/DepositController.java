@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,20 +16,27 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.bankapp.model.dao.ChequeDepositDao;
 import com.bankapp.model.dto.DepositDTO;
 import com.bankapp.model.entity.ChequeDeposit;
 import com.bankapp.model.service.AccountService;
+import com.bankapp.model.service.ChequeDepositService;
+
+/**
+ * 
+ * @author nknis
+ *
+ */
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true", allowedHeaders = "*")
 public class DepositController {
+	private static final Logger LOGGER = LoggerFactory.getLogger(DepositController.class);
 
 	@Autowired
 	private AccountService accountService;
 
 	@Autowired
-	private ChequeDepositDao chequeDepositDao;
+	private ChequeDepositService chequeDepositService;
 
 	@PostMapping("/api/deposit")
 	public ResponseEntity<String> handleDepositFormSubmit(@Valid @ModelAttribute DepositDTO depositFormDTO,
@@ -37,18 +46,14 @@ public class DepositController {
 		String accountPassword = depositFormDTO.getAccountPassword();
 		double amount = depositFormDTO.getAmount();
 		MultipartFile selectedFile = depositFormDTO.getSelectedFile();
-
-		boolean insertChequeDeposit = chequeDepositDao.insertChequeDeposit(
-				new ChequeDeposit(chequeNumber, accountNumber, accountPassword, amount, selectedFile.getBytes()));
-		System.out.println(chequeDepositDao.selectAllChequeDeposit().toString());
-		System.out.println(insertChequeDeposit);
-
 		try {
-			chequeDepositDao.insertChequeDeposit(
+			chequeDepositService.insertChequeDeposit(
 					new ChequeDeposit(chequeNumber, accountNumber, accountPassword, amount, selectedFile.getBytes()));
+			LOGGER.info("Cheque Deposit successful");
 			return ResponseEntity.ok("Cheque Deposit successful");
 		} catch (Exception e) {
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Transfer failed");
+			LOGGER.error("Deposit failed", e);
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Deposit failed");
 		}
 	}
 }

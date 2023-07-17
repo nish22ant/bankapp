@@ -1,0 +1,703 @@
+19:52:00.589 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bankapp.BankappSpringBootApplicationTests], using SpringBootContextLoader
+19:52:00.616 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.bankapp.BankappSpringBootApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:52:00.619 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.bankapp.BankappSpringBootApplicationTests]: BankappSpringBootApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:52:00.918 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.bankapp.BankappSpringBootApplication for test class com.bankapp.BankappSpringBootApplicationTests
+19:52:01.119 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+19:52:01.146 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@403132fc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71c5b236, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2cab9998, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2f7a7219, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@669513d8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a1d593e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4a8a60bc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@361c294e, org.springframework.test.context.event.EventPublishingTestExecutionListener@7859e786, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@285d851a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@314b8f2d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@664a9613, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5118388b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@15a902e7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7876d598]
+19:52:02.222 [main] INFO  c.b.BankappSpringBootApplicationTests - Starting BankappSpringBootApplicationTests using Java 17.0.7 on DESKTOP-90BDVUI with PID 16040 (started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+19:52:02.225 [main] INFO  c.b.BankappSpringBootApplicationTests - The following 1 profile is active: "dev"
+19:52:04.913 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:52:05.044 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 3 JPA repository interfaces.
+19:52:08.073 [main] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+19:52:08.129 [main] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+19:52:08.373 [main] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+19:52:08.898 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:52:09.025 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+19:52:09.373 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19:52:09.836 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:52:10.666 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:52:10.746 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+19:52:12.849 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:52:12.865 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:52:14.411 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:52:16.409 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+19:52:16.544 [main] INFO  c.b.BankappSpringBootApplicationTests - Started BankappSpringBootApplicationTests in 15.329 seconds (JVM running for 17.763)
+19:52:17.064 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:52:17.068 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:52:17.094 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:52:17.111 [SpringApplicationShutdownHook] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+19:53:02.153 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+19:53:02.161 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+19:53:02.343 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:53:02.343 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:53:04.262 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:53:04.367 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+19:53:05.609 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+19:53:05.622 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:53:05.623 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:53:05.623 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+19:53:05.764 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:53:05.764 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3420 ms
+19:53:07.418 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+19:53:07.491 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+19:53:07.569 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+19:53:07.938 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:53:08.030 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+19:53:08.329 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19:53:08.485 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:53:09.161 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:53:09.197 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+19:53:10.721 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:53:10.756 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:53:11.632 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:53:12.791 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:53:12.804 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+19:53:12.878 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:53:12.983 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+19:53:13.032 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 11.963 seconds (JVM running for 14.047)
+19:53:14.807 [RMI TCP Connection(9)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:53:14.807 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:53:14.810 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+19:56:29.592 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:56:29.614 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+19:56:29.614 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+19:56:29.616 [Thread-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+19:56:29.619 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:56:29.623 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+19:56:29.627 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:56:29.640 [Thread-5] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+19:56:29.646 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:56:29.655 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:56:29.768 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+19:56:29.769 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+19:56:30.170 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:56:30.190 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 3 JPA repository interfaces.
+19:56:30.429 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+19:56:30.430 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:56:30.431 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:56:30.431 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+19:56:30.496 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:56:30.496 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 724 ms
+19:56:30.773 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+19:56:30.777 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+19:56:30.782 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+19:56:30.829 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:56:30.837 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+19:56:30.864 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+19:56:30.865 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+19:56:31.039 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:56:31.040 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:56:31.394 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:56:31.836 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:56:31.845 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+19:56:31.898 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:56:31.904 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+19:56:31.923 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 2.195 seconds (JVM running for 212.938)
+19:56:31.930 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:56:35.790 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:56:35.790 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:56:35.792 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+19:57:50.868 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+19:57:50.914 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+19:57:50.914 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+19:57:50.915 [Thread-7] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+19:57:50.919 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:57:50.923 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+19:57:50.930 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:57:50.933 [Thread-7] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+19:57:50.943 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+19:57:50.956 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+19:57:51.176 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+19:57:51.176 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+19:57:51.577 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:57:51.592 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+19:57:51.743 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+19:57:51.744 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:57:51.745 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:57:51.745 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+19:57:51.778 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:57:51.778 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 595 ms
+19:57:52.014 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+19:57:52.021 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+19:57:52.027 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+19:57:52.059 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:57:52.071 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+19:57:52.097 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+19:57:52.097 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+19:57:52.247 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:57:52.249 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:57:52.445 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:57:52.796 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:57:52.801 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+19:57:52.827 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:57:52.832 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+19:57:52.846 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.75 seconds (JVM running for 293.861)
+19:57:52.849 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+19:57:56.637 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:57:56.637 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+19:57:56.642 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+20:00:03.247 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:00:03.266 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:00:03.266 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:00:03.267 [Thread-11] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+20:00:03.269 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:00:03.271 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:00:03.273 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:00:03.275 [Thread-11] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:00:03.280 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+20:00:03.285 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+20:00:03.389 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:00:03.389 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:00:03.743 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:00:03.759 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 3 JPA repository interfaces.
+20:00:03.869 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:00:03.870 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:00:03.870 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:00:03.870 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:00:03.900 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:00:03.900 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 508 ms
+20:00:04.048 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:00:04.055 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:00:04.060 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:00:04.086 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:00:04.091 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+20:00:04.110 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+20:00:04.110 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:00:04.244 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:00:04.244 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:00:04.399 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:00:04.748 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:00:04.758 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:00:04.804 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:00:04.811 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:00:04.835 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.478 seconds (JVM running for 425.85)
+20:00:04.839 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:00:08.860 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:00:08.861 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+20:00:08.863 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+20:01:49.410 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+20:01:49.440 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:01:49.440 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:01:49.440 [Thread-15] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+20:01:49.444 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:01:49.446 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:01:49.449 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:01:49.451 [Thread-15] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:01:49.457 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+20:01:49.466 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+20:01:49.579 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:01:49.579 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:01:49.906 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:01:49.920 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+20:01:50.021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:01:50.022 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:01:50.022 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:01:50.022 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:01:50.061 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:01:50.061 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 480 ms
+20:01:50.252 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:01:50.258 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:01:50.264 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:01:50.296 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:01:50.305 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+20:01:50.320 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+20:01:50.320 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:01:50.408 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:01:50.408 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:01:50.566 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:01:50.902 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:01:50.907 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:01:50.930 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:01:50.934 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:01:50.948 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.4 seconds (JVM running for 531.963)
+20:01:50.951 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:03:21.291 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:03:21.334 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:03:21.335 [Thread-19] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:03:21.339 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:03:21.343 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:03:21.348 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:03:21.351 [Thread-19] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:03:21.362 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+20:03:21.373 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+20:03:21.524 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:03:21.524 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:03:21.917 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:03:21.935 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+20:03:22.071 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:03:22.072 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:03:22.072 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:03:22.072 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:03:22.100 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:03:22.100 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 574 ms
+20:03:22.257 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:03:22.261 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:03:22.265 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:03:22.283 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:03:22.289 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+20:03:22.303 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+20:03:22.303 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:03:22.396 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:03:22.396 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:03:22.539 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:03:22.893 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:03:22.900 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:03:22.936 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:03:22.942 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:03:22.954 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.461 seconds (JVM running for 623.969)
+20:03:22.957 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:03:40.691 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+20:03:40.734 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:03:40.734 [Thread-23] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:03:40.739 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:03:40.742 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:03:40.749 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:03:40.755 [Thread-23] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:03:40.767 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+20:03:40.777 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+20:03:40.966 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:03:40.966 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:03:41.352 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:03:41.365 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+20:03:41.471 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:03:41.472 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:03:41.472 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:03:41.472 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:03:41.500 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:03:41.501 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 532 ms
+20:03:41.689 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:03:41.696 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:03:41.702 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:03:41.733 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:03:41.740 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+20:03:41.760 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+20:03:41.761 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:03:41.884 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:03:41.885 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:03:42.083 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:03:42.380 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:03:42.385 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:03:42.408 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:03:42.411 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:03:42.423 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.492 seconds (JVM running for 643.439)
+20:03:42.425 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:04:06.304 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:04:06.346 [Thread-27] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:04:06.347 [Thread-27] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:04:06.351 [Thread-27] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:04:06.355 [Thread-27] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:04:06.362 [Thread-27] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:04:06.366 [Thread-27] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:04:06.375 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+20:04:06.386 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+20:04:06.623 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:04:06.623 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:04:07.070 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:04:07.087 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+20:04:07.190 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:04:07.191 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:04:07.192 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:04:07.192 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:04:07.226 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:04:07.226 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 597 ms
+20:04:07.404 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:04:07.409 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:04:07.416 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:04:07.446 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:04:07.454 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+20:04:07.474 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+20:04:07.475 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:04:07.566 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:04:07.566 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:04:07.741 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:04:08.068 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:04:08.072 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:04:08.094 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:04:08.098 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:04:08.111 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.56 seconds (JVM running for 669.126)
+20:04:08.114 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:05:53.761 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:05:53.805 [Thread-31] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:05:53.806 [Thread-31] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:05:53.810 [Thread-31] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:05:53.816 [Thread-31] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:05:53.820 [Thread-31] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:05:53.823 [Thread-31] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:05:53.833 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+20:05:53.843 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+20:05:54.090 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:05:54.091 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:05:54.463 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:05:54.482 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+20:05:54.624 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:05:54.625 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:05:54.625 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:05:54.626 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:05:54.664 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:05:54.664 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 570 ms
+20:05:54.830 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:05:54.834 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:05:54.838 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:05:54.865 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:05:54.874 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+20:05:54.899 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+20:05:54.900 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:05:55.034 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:05:55.035 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:05:55.251 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:05:55.508 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:05:55.512 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:05:55.534 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:05:55.538 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:05:55.552 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.536 seconds (JVM running for 776.567)
+20:05:55.554 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:06:09.599 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+20:06:09.644 [Thread-35] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:06:09.644 [Thread-35] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:06:09.648 [Thread-35] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:06:09.652 [Thread-35] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:06:09.656 [Thread-35] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:06:09.659 [Thread-35] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:06:09.667 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+20:06:09.678 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+20:06:09.925 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:06:09.925 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:06:10.296 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:06:10.311 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+20:06:10.418 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:06:10.420 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:06:10.420 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:06:10.420 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:06:10.448 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:06:10.448 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 519 ms
+20:06:10.605 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:06:10.611 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:06:10.617 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:06:10.646 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:06:10.654 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+20:06:10.673 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+20:06:10.674 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:06:10.780 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:06:10.781 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:06:10.942 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:06:11.231 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:06:11.238 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:06:11.261 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:06:11.265 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:06:11.278 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.421 seconds (JVM running for 792.293)
+20:06:11.281 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:06:37.168 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+20:06:37.217 [Thread-39] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:06:37.217 [Thread-39] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:06:37.222 [Thread-39] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:06:37.226 [Thread-39] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:06:37.230 [Thread-39] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:06:37.233 [Thread-39] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:06:37.242 [Thread-39] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+20:06:37.254 [Thread-39] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+20:06:37.439 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:06:37.439 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:06:37.837 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:06:37.860 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+20:06:37.967 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:06:37.968 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:06:37.969 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:06:37.969 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:06:38.008 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:06:38.008 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 567 ms
+20:06:38.181 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:06:38.187 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:06:38.193 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:06:38.222 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:06:38.229 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+20:06:38.249 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+20:06:38.250 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:06:38.328 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:06:38.328 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:06:38.488 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:06:38.780 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:06:38.784 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:06:38.806 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:06:38.810 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:06:38.823 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.412 seconds (JVM running for 819.838)
+20:06:38.825 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:09:09.417 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:09:09.462 [Thread-43] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:09:09.462 [Thread-43] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:09:09.467 [Thread-43] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:09:09.471 [Thread-43] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:09:09.475 [Thread-43] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:09:09.477 [Thread-43] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:09:09.486 [Thread-43] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+20:09:09.497 [Thread-43] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+20:09:09.752 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:09:09.752 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:09:10.156 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:09:10.170 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+20:09:10.283 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:09:10.284 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:09:10.284 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:09:10.284 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:09:10.328 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:09:10.328 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 571 ms
+20:09:10.497 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:09:10.503 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:09:10.509 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:09:10.541 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:09:10.550 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+20:09:10.572 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+20:09:10.572 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:09:10.653 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:09:10.653 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:09:10.831 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:09:11.169 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:09:11.179 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:09:11.219 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:09:11.224 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:09:11.244 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.563 seconds (JVM running for 972.259)
+20:09:11.248 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:10:31.307 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:10:31.326 [Thread-47] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:10:31.326 [Thread-47] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:10:31.328 [Thread-47] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:10:31.330 [Thread-47] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:10:31.332 [Thread-47] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:10:31.333 [Thread-47] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:10:31.337 [Thread-47] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+20:10:31.341 [Thread-47] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+20:10:31.475 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:10:31.475 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:10:31.828 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:10:31.843 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+20:10:31.945 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:10:31.945 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:10:31.945 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:10:31.945 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:10:31.977 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:10:31.977 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 497 ms
+20:10:32.151 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:10:32.157 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:10:32.163 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:10:32.190 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:10:32.195 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+20:10:32.213 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+20:10:32.214 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:10:32.313 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:10:32.313 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:10:32.499 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:10:32.832 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:10:32.840 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:10:32.875 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:10:32.881 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:10:32.895 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.47 seconds (JVM running for 1053.91)
+20:10:32.898 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:20:37.751 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:20:37.797 [Thread-51] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:20:37.798 [Thread-51] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:20:37.803 [Thread-51] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:20:37.806 [Thread-51] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:20:37.810 [Thread-51] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:20:37.813 [Thread-51] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:20:37.823 [Thread-51] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+20:20:37.832 [Thread-51] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+20:20:38.106 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:20:38.106 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:20:38.489 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:20:38.502 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+20:20:38.677 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:20:38.678 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:20:38.678 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:20:38.678 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:20:38.722 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:20:38.722 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 612 ms
+20:20:38.889 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:20:38.894 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:20:38.897 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:20:38.926 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:20:38.934 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+20:20:38.956 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+20:20:38.957 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:20:39.058 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:20:39.059 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:20:39.256 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:20:39.591 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:20:39.596 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:20:39.619 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:20:39.623 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:20:39.635 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.603 seconds (JVM running for 1660.65)
+20:20:39.638 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:21:14.766 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:21:14.809 [Thread-55] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:21:14.810 [Thread-55] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:21:14.814 [Thread-55] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:21:14.818 [Thread-55] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:21:14.822 [Thread-55] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:21:14.824 [Thread-55] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:21:14.833 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+20:21:14.844 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+20:21:15.120 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:21:15.120 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:21:15.446 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:21:15.460 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+20:21:15.576 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:21:15.576 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:21:15.577 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:21:15.577 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:21:15.605 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:21:15.605 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 479 ms
+20:21:15.712 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:21:15.716 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:21:15.720 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:21:15.739 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:21:15.744 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+20:21:15.757 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+20:21:15.758 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:21:15.841 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:21:15.841 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:21:16.018 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:21:16.333 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:21:16.338 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:21:16.359 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:21:16.368 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:21:16.380 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.332 seconds (JVM running for 1697.396)
+20:21:16.383 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:21:42.324 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:21:42.366 [Thread-59] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:21:42.366 [Thread-59] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:21:42.370 [Thread-59] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:21:42.373 [Thread-59] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:21:42.378 [Thread-59] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:21:42.380 [Thread-59] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:21:42.388 [Thread-59] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+20:21:42.397 [Thread-59] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+20:21:42.551 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:21:42.551 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:21:42.884 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:21:42.904 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+20:21:43.061 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:21:43.062 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:21:43.062 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:21:43.062 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:21:43.089 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:21:43.090 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 536 ms
+20:21:43.200 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:21:43.204 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:21:43.209 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:21:43.238 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:21:43.249 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+20:21:43.280 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+20:21:43.281 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:21:43.360 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:21:43.360 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:21:43.506 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:21:43.873 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:21:43.877 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:21:43.899 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:21:43.903 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:21:43.915 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.394 seconds (JVM running for 1724.931)
+20:21:43.918 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:22:25.226 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+20:22:25.270 [Thread-63] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:22:25.270 [Thread-63] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:22:25.275 [Thread-63] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:22:25.278 [Thread-63] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:22:25.282 [Thread-63] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:22:25.285 [Thread-63] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:22:25.294 [Thread-63] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+20:22:25.303 [Thread-63] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+20:22:25.434 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:22:25.434 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:22:25.819 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:22:25.833 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+20:22:25.938 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:22:25.939 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:22:25.939 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:22:25.939 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:22:25.968 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:22:25.968 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 532 ms
+20:22:26.076 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:22:26.080 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:22:26.083 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:22:26.106 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:22:26.113 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Starting...
+20:22:26.133 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Start completed.
+20:22:26.133 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:22:26.233 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:22:26.234 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:22:26.364 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:22:26.648 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:22:26.655 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:22:26.681 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:22:26.687 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:22:26.706 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.3 seconds (JVM running for 1767.722)
+20:22:26.710 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:24:20.665 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+20:24:20.684 [Thread-67] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:24:20.685 [Thread-67] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:24:20.687 [Thread-67] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:24:20.688 [Thread-67] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:24:20.690 [Thread-67] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:24:20.691 [Thread-67] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:24:20.695 [Thread-67] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown initiated...
+20:24:20.700 [Thread-67] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown completed.
+20:24:20.823 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:24:20.823 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:24:21.161 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:24:21.178 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+20:24:21.286 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:24:21.287 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:24:21.287 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:24:21.287 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:24:21.320 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:24:21.320 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 495 ms
+20:24:21.534 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:24:21.541 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:24:21.548 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:24:21.586 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:24:21.596 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Starting...
+20:24:21.622 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Start completed.
+20:24:21.623 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:24:21.760 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:24:21.760 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:24:21.911 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:24:22.244 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:24:22.251 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:24:22.285 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:24:22.292 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:24:22.310 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.514 seconds (JVM running for 1883.325)
+20:24:22.313 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+20:24:29.829 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+20:24:29.859 [Thread-71] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+20:24:29.860 [Thread-71] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:24:29.861 [Thread-71] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+20:24:29.863 [Thread-71] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+20:24:29.865 [Thread-71] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:24:29.866 [Thread-71] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' removed from EhcacheManager.
+20:24:29.869 [Thread-71] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown initiated...
+20:24:29.874 [Thread-71] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown completed.
+20:24:30.011 [restartedMain] INFO  c.b.BankappSpringBootApplication - Starting BankappSpringBootApplication using Java 17.0.7 on DESKTOP-90BDVUI with PID 9920 (E:\project\bankapp\backend\bankapp_spring_boot\target\classes started by nknis in E:\project\bankapp\backend\bankapp_spring_boot)
+20:24:30.012 [restartedMain] INFO  c.b.BankappSpringBootApplication - The following 1 profile is active: "dev"
+20:24:30.374 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:24:30.387 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+20:24:30.489 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:24:30.490 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:24:30.490 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:24:30.490 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+20:24:30.517 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:24:30.517 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 502 ms
+20:24:30.634 [restartedMain] INFO  o.e.s.o.t.o.p.UpfrontAllocatingPageSource - Allocating 10.0MB in chunks
+20:24:30.639 [restartedMain] INFO  org.ehcache.core.EhcacheManager - Cache 'accounts' created in EhcacheManager.
+20:24:30.643 [restartedMain] INFO  org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./E./project/bankapp/backend/bankapp_spring_boot/target/classes/ehcache.xml,Cache=accounts
+20:24:30.663 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:24:30.668 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Starting...
+20:24:30.681 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Start completed.
+20:24:30.682 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+20:24:30.767 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:24:30.767 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:24:30.950 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:24:31.254 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:24:31.258 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+20:24:31.281 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:24:31.284 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:24:31.297 [restartedMain] INFO  c.b.BankappSpringBootApplication - Started BankappSpringBootApplication in 1.325 seconds (JVM running for 1892.312)
+20:24:31.299 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

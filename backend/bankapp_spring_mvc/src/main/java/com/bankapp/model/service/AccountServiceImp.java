@@ -11,6 +11,12 @@ import com.bankapp.exception.IncorrectPasswordException;
 import com.bankapp.model.dao.AccountDao;
 import com.bankapp.model.entity.Account;
 
+/**
+ * Service Implementation for Account
+ * @author nknis
+ *
+ */
+
 @Transactional
 @Service(value = "accountService")
 public class AccountServiceImp implements AccountService {

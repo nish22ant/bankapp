@@ -1,15 +1,1 @@
 INDEX VERSION 1.4+E:\project\bankapp\backend\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1071961200.index
-3911261631.index
-1676188013.index
-603623617.index
-3997574343.index
-2276353330.index
-1895557786.index
-735199053.index
-488297896.index
-1270051486.index
-3543301778.index
-619689132.index
-717442811.index
-2283354832.index

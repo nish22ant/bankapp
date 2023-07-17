@@ -29,7 +29,7 @@ public class ChequeDepositDaoImpl implements ChequeDepositDao {
 
 	@Override
 	public ChequeDeposit selectChequeDeposit(long id) {
-		return jdbcTemplate.queryForObject(env.getProperty("eCheque.select"), chequeDepositRowMapper, id);
+		return jdbcTemplate.queryForObject(env.getProperty("eCheque.select"), new Object[] {id}, chequeDepositRowMapper);
 	}
 
 	@Override

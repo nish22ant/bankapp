@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="FILE_DIR" value="logs" />
+	<property name="FILE_NAME" value="log" />
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${FILE_DIR}/${FILE_NAME}.log</file>
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+
+
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>archived/log.%d.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+				<maxFileSize>10KB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
